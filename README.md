@@ -15,6 +15,25 @@ Before you can use `MEDExtractor4FEA`, you need to ensure you have Python instal
 ```
 pip install h5py numpy
 ```
+## Viewing MED File Contents
+
+### Prerequisites for Linux Users
+Linux users can view the contents of MED files by installing `h5py` and using the `h5dump` command:
+
+```bash
+h5dump file_name.med
+```
+
+## Key Components in MED Files
+
+### Our focus is primarily on two parts within the MED file structure:
+
+- **NOD (Element Node Information):** This part introduces element nodes in a structured manner. It begins with the first node of all elements, followed by all second nodes of each element, etc.
+
+- **COO (Coordinate Information):** This section provides the coordinates for each node, organized sequentially by direction—first all X coordinates, then all Y coordinates, followed by all Z coordinates (in 3D models) for the nodes.
+
+
+Understanding these sections is crucial for interpreting the spatial and connectivity information encoded in MED files.
 
 ## Usage
 
